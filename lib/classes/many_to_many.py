@@ -89,7 +89,7 @@ class Author:
     # Returns a unique list of strings with the categories of the magazines the author has contributed to, else return None
     def topic_areas(self):
         if len(self.magazines()) > 0:
-            return [magazine.category for magazine in self.magazines()]
+            return list(set([magazine.category for magazine in self.magazines()]))
         else:
             return None
 
