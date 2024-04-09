@@ -148,12 +148,7 @@ class Magazine:
     def contributing_authors(self):
         authors = []
         for author in self.contributors():
-            if (
-                len(
-                    [article for article in self.articles() if article.author == author]
-                )
-                > 2
-            ):
+            if (len([article for article in self.articles() if article.author == author]) > 2):
                 authors.append(author)
         if len(authors) > 0:
             return authors
