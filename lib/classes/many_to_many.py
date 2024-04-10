@@ -156,13 +156,13 @@ class Magazine:
             return None
 
     # Returns the Magazine instance with the most articles
+    # Using the max function with a lambda function to get the magazine with the most articles
+    # The lambda function take an instance of the class called magazine
+    # And returns the number of the articles for that instance
+    # The max function will return the instance with the most articles
     @classmethod
     def top_publisher(cls):
         if len(Article.all) > 0:
-            # Using the max function with a lambda function to get the magazine with the most articles
-            # The lambda function take an instance of the class called magazine
-            # And returns the number of the articles for that instance
-            # The max function will return the instance with the most articles
             return max(cls.all, key=lambda magazine: len(magazine.articles()))
         else:
             return None
