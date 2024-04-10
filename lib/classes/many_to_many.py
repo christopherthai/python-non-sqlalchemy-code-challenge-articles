@@ -8,7 +8,7 @@ class Article:
         self.title = title
         type(self).all.append(self)
 
-    # Create a property that returns the author of the article
+    # Create a property that returns the title of the article
     @property
     def title(self):
         return self._title
@@ -60,7 +60,7 @@ class Author:
         self.name = name
         type(self).all.append(self)
 
-    # Create a property that returns a list of all articles written by the author
+    # Create a property that returns the name of the author
     @property
     def name(self):
         return self._name
